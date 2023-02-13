@@ -1,0 +1,120 @@
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              child: CarouselSlider(
+                items: [
+                  Images(
+                    image: "assets/image/1.jpg",
+                  ),
+                  Images(
+                    image: "assets/image/2.jpg",
+                  ),
+                  Images(
+                    image: "assets/image/3.jpg",
+                  ),
+                  Images(
+                    image: "assets/image/4.jpg",
+                  ),
+                  Images(
+                    image: "assets/image/5.jpg",
+                  ),
+                ],
+
+                //Slider Container properties
+                options: CarouselOptions(
+                  height: 200,
+                  enlargeCenterPage: true,
+                  autoPlay: true,
+                  aspectRatio: 16 / 9,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  viewportFraction: 0.8,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    children: [
+                      Category(
+                        text: "Button1",
+                        bgcolor: Colors.pink,
+                      ),
+                      Category(
+                        text: "Button1",
+                        bgcolor: Colors.pink,
+                      ),
+                      Category(
+                        text: "Button1",
+                        bgcolor: Colors.pink,
+                      ),
+                      Category(
+                        text: "Button1",
+                        bgcolor: Colors.pink,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(15),
+                        child: Image(
+                          image: AssetImage(
+                            "assets/image/5.jpg",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(15),
+                        child: Image(
+                          image: AssetImage(
+                            "assets/image/2.jpg",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(15),
+                        child: Image(
+                          image: AssetImage(
+                            "assets/image/3.jpg",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
